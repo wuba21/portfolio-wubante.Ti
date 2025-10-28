@@ -162,6 +162,28 @@ main, footer {
     box-shadow: 0 6px 18px rgba(12,15,22,0.04);
 }
 .preview + .preview { margin-top: 0.85rem; }
+.back{
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: #350ff2;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(3,8,20,0.3);
+      width: 150px;
+    }
+    .back a{
+      color: #fff;
+      text-decoration: none;
+
+    }
+    .back:hover{
+      background: #1c2541;
+      box-shadow: 0 6px 18px rgba(3,8,20,0.35);
+      color: #f6f6f7ef;
+    }
 
 footer {
     display: flex;
@@ -299,5 +321,6 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 @media (min-width: 1200px) {
     main, footer { padding: 1.5rem; }
 }
+
 
 
