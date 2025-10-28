@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #fff;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --danger: #dc2626;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: #0f172a;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 24px;
+    }
+    header {
+      grid-column: 1 / -1;
+    }
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    p.lead {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-right: 10px;
+      border-right: 1px solid #eef2ff;
+    }
+    .item {
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.06), transparent);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e6eef9;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 100px;
+      resize: none;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    .row > * {
+      flex: 1;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      background: var(--accent);
+      color: white;
+    }
+    .secondary {
+      background: transparent;
+      border: 1px solid #e6eef9;
+      color: var(--muted);
+    }
+    .status {
+      font-size: 13px;
+    }
+    .error {
+      color: var(--danger);
+    }
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .back{
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: #350ff2;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(3,8,20,0.3);
+      width: 150px;
+    }
+    .back a{
+      color: #fff;
+      text-decoration: none;
+
+    }
+    .back:hover{
+      background: #1c2541;
+      box-shadow: 0 6px 18px rgba(3,8,20,0.35);
+      color: #f6f6f7ef;
+    }
+    @media (max-width: 760px) {
+      .card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+      .info {
+        border-right: none;
+        border-bottom: 1px solid #eef2ff;
+        padding-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Contact Me</h1>
+      <p class="lead">
+        My goal is to become a professional web developer and software engineer.<br>
+        If you want to contact me, please use the form below.
+      </p>
+    </header>
+
+    <section class="info">
+      <div class="item">
+        <strong>Email</strong>
+        <div class="note">mywuban@gmail.com</div>
+      </div>
+      <div class="item">
+        <strong>Phone</strong>
+        <div class="note"><a href="tel:+251922373958">+251 922373958</a></div>
+      </div>
+      <div class="item">
+        <strong>Address</strong>
+        <div class="note">University of Gondar, Ethiopia</div>
+      </div>
+    </section>
+
+    <form id="contactForm" method="post" action="/contact">
+      <div class="row">
+        <div>
+          <label for="name">Full Name:</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required placeholder="Your contact email">
+        </div>
+      </div>
+
+      <div>
+        <label for="subject">Subject:</label>
+        <input id="subject" name="subject" type="text" placeholder="What is this about?">
+      </div>
+
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Write your message..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="submitBtn">Send Message</button>
+        <button type="button" id="clearBtn" class="secondary">Clear</button>
+        <div id="status" class="status" role="status"></div>
+      </div>
+
+      <div class="note">
+        By sending, you agree to our processing of information according to our privacy policy.
+      </div>
+    </form>
+    <div class="back">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('status');
+    const submitBtn = document.getElementById('submitBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    function showStatus(msg, isError = false) {
+      statusEl.textContent = msg;
+      statusEl.className = isError ? 'status error' : 'status';
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      showStatus('');
+
+      const data = new FormData(form);
+      const name = data.get('name').trim();
+      const email = data.get('email').trim();
+      const message = data.get('message').trim();
+
+      if (name.length < 2) return showStatus('Please enter a valid name.', true);
+      if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) return showStatus('Invalid email.', true);
+      if (message.length < 10) return showStatus('Message too short.', true);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, subject: data.get('subject'), message }),
+        });
+
+        if (res.ok) {
+          showStatus('✅ Message sent successfully!');
+          form.reset();
+        } else {
+          showStatus('❌ Server error. Please try again later.', true);
+        }
+      } catch {
+        showStatus('⚠️ Network error. Please try again.', true);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      if (confirm('Clear the form?')) {
+        form.reset();
+        showStatus('');
+      }
+    });
+  </script>
+</body>
+</html>
