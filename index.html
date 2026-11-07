@@ -1,96 +1,85 @@
-<!-- index.html
---- a/file:///c%3A/Users/HP/OneDrive/Desktop/portfolio/index.html
-+++ b/file:///c%3A/Users/HP/OneDrive/Desktop/portfolio/index.html
-@@ -1,3 +1,4 @@      -->
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Simple portfolio — Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Wubante Tilahun — Computer Science student, web development learner, and programmer.">
+  <title>Wubante Tilahun | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <a class="brand" href="index.html">
-            <img src="image.png" alt="Logo" class="logo" />
-            <span>My portfolio  W.T</span>
-        </a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Wubante Tilahun home"><span class="brand-mark">W</span><span>Wubante<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="about2.html">About</a>
+        <a class="nav-link" href="service.html">Projects</a>
+        <a class="nav-cta" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-        <nav class="nav" id="nav">
-            <a href="index.html">Home</a>
-            <a href="about2.html">About</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
-            
-        </div >  
-        </nav>
-    <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-    </header>
-    <main>
-    <section id="home" class="hero">
-            <h1>Welcome to My Personal Portfolio</h1>
-    <h2>Hello,I'm <span>Wubante Tilahun <br>      
-            <h5>      ID:02170/16 ------sec 2  </h5> </span></h2><p>
-        I'm a Computer Science student at University of Gondar passionate about web development,
-        programming, and data structures. I love building creative and interactive websites and solving real-world problems.
-    </p>
-            <a class="btn" href="contact.html">Get in touch</a>
-        </section>
-    <section id="about" class="preview">
-            <h2>About Me</h2>
-            <p>  I’m a dedicated learner who enjoys coding and creating projects that combine design and logic.
-    I have skills in HTML, CSS, JavaScript, C++, and SQL. I’ve developed projects like
-    Simple Book Wishlist System  C++, portfolio sites, and calculators.
-    My goal is to become a professional web developer and software enginee</p>
-            <p><a href="about2.html">Read more →</a></p>
-        </section>
-
-        <section id="services" class="preview">
-            <h2>Our projects</h2>
-            <p>-A personal portfolio built using HTML, CSS, and JavaScript. <br>
-               - Simple Book Wishlist System  C++. <br>
-               - Subnetting and routing design using Cisco Packet Tracer.
-            </p>
-            <p><a href="service.html">See services →</a></p>
-        </section>
-        <div class="back">
-      <a href="about2.html">&rarr; Next </a>
-    </div>
-    </main>
- <footer>
-        <div class="contact">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:wubantetilahun002@gmail.com">wubantetilahun002@gmail.com</a><br>Phone: +2519 22373958</p>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> COMPUTER SCIENCE STUDENT · GONDAR, ETHIOPIA</p>
+        <h1>Hi, I’m <span class="accent-text">Wubante Tilahun.</span><br> I build thoughtful things with code.</h1>
+        <p class="hero-lead">I’m a Computer Science student at the University of Gondar, interested in web development, software, and solving problems through programming.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="service.html">Explore my projects <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="contact.html">Get in touch</a>
         </div>
-        <div class="social">
-            <a href="https://www.facebook.com/Boki Lali" target="_blank" rel="noopener">
-                <i class="fab fa-facebook-f"></i><span class="sr-only">Facebook</span></a>
-        <a href="https://t.me/+2519 22373958" target="_blank" rel="noopener">
-       <i class="fab fa-telegram-plane"></i>
-                <span class="sr-only">Telegram</span>
-                 </a>
-                 <a href="https://www.youtube.com/@Hagerie-x9" target="_blank" rel="noopener">
-           <i class="fab fa-youtube"></i>
-           <span class="sr-only">YouTube</span></a>
-          
-        </div>
-        <p class="copyright">&copy; <span id="year"></span> My Simple Portfolio</p>
-    </footer>
- <script>
-     const toggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('nav');
+        <div class="hero-stack"><span>Currently learning and building with</span><div class="stack-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>C++</span><span>SQL</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Portrait of Wubante Tilahun">
+        <div class="portrait-frame"><img src="best.jpg" alt="Wubante Tilahun" class="portrait"></div>
+        <div class="floating-card"><span class="floating-icon">✳</span><span><strong>Curious by nature</strong><small>Learning through building</small></span></div>
+        <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
+      </div>
+    </section>
 
-    toggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      toggle.classList.toggle('active');
+    <section class="section container" aria-labelledby="intro-title">
+      <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2 id="intro-title">Design-minded. <span class="accent-text">Problem-focused.</span></h2></div>
+      <div class="intro-grid">
+        <p class="intro-copy">I enjoy combining logic and creativity—whether I’m building a website, practicing data structures, or exploring a new idea. I’m growing my skills one project at a time and looking forward to creating useful, user-friendly software.</p>
+        <a class="text-link" href="about2.html">More about me <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading section-heading-row"><div><p class="eyebrow">SELECTED WORK</p><h2>Projects I’ve been building</h2></div><a class="text-link" href="service.html">View all projects <span aria-hidden="true">→</span></a></div>
+        <div class="project-grid project-grid-home">
+          <article class="project-card"><div class="project-topline"><span class="project-number">01</span><span class="project-type">WEB · PYTHON</span></div><h3>Django Online Job Portal</h3><p>A job portal project built with Django and Python.</p><a class="card-link" href="https://github.com/wuba21/Django-online-Job-Portal-system" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+          <article class="project-card"><div class="project-topline"><span class="project-number">02</span><span class="project-type">JAVA</span></div><h3>Job Portal System</h3><p>A Java project focused on a job portal system.</p><a class="card-link" href="https://github.com/wuba21/JobPortalSystem" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+          <article class="project-card"><div class="project-topline"><span class="project-number">03</span><span class="project-type">PYTHON · ML</span></div><h3>Crop Recommendation</h3><p>A machine-learning project exploring crop recommendations.</p><a class="card-link" href="https://github.com/wuba21/Crop-Recommendation-in-ML" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container callout">
+      <div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let’s make something useful.</h2><p class="muted-copy">I’m open to learning, collaborating, and connecting with people who enjoy building.</p></div>
+      <a class="button button-primary" href="contact.html">Say hello <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">W</span><span>Wubante<span class="brand-dot">.</span></span></a><p>© <span id="year"></span> Wubante Tilahun</p><a class="footer-link" href="https://github.com/wuba21" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      navLinks.classList.toggle('is-open', !isOpen);
     });
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
-
-

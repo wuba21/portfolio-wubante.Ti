@@ -1,138 +1,44 @@
-<!-- service.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects &amp; Skills — Wubante Tilahun</title>
-  <style>
-    :root {
-      --card: #1a1a1a;
-      --accent: #6c63ff;
-      --accent-2: #3f3d56;
-      --text: #e0e0e0;
-      --muted: #a0a0a0;
-      --radius: 12px;
-      --shadow: rgba(0, 0, 0, 0.5) 0 4px 12px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 1px 20px;
-      background: #0f0f0f;
-      color: var(--text);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    .about-content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      align-self: flex-start;
-      padding: 12px 18px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.03);
-      text-decoration: none;
-    }
-    .logo img {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .logo span { color: var(--accent); font-size: 1.5rem; font-weight: 600; }
-    h2 { margin: 8px 0 0; color: var(--accent); }
-    .skills-list, .project-list {
-      display: grid;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .skills-list li, .project-list li {
-      padding: 14px 16px;
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-    }
-    .project-list a { color: #b7b2ff; font-weight: 600; }
-    .project-list a:hover { color: #fff; }
-    .project-list p { margin: 6px 0 0; }
-    .note { color: var(--muted); margin: 0; }
-    .back {
-      width: 150px;
-      margin: 20px 0 10px;
-      padding: 10px;
-      border-radius: 6px;
-      background: #350ff2;
-      text-align: center;
-    }
-    .back a { color: #fff; text-decoration: none; }
-    .back:hover { background: #1c2541; }
-    @media (max-width: 720px) {
-      .about-content { padding: 20px; }
-      .logo img { width: 45px; height: 45px; }
-      .logo span { font-size: 1.3rem; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Selected programming and web projects by Wubante Tilahun.">
+  <title>Projects | Wubante Tilahun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="about-content">
-    <a class="logo" href="index.html">
-      <img src="image.png" alt="University of Gondar logo">
-      <span>Wubante</span>
-    </a>
-
-    <section aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <ul class="skills-list">
-        <li>HTML — building web page structure and content</li>
-        <li>CSS — styling and responsive layouts</li>
-        <li>JavaScript — interactive web page behavior</li>
-        <li>C++ — data structures, algorithms, and problem solving</li>
-        <li>SQL — basic queries and database schema design</li>
-        <li>Tools — Git, VS Code, and Cisco Packet Tracer</li>
-      </ul>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark">W</span><span>Wubante<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+    <div class="nav-links" id="nav-links"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about2.html">About</a><a class="nav-link active" href="service.html" aria-current="page">Projects</a><a class="nav-cta" href="contact.html">Contact <span aria-hidden="true">↗</span></a></div>
+  </nav></header>
+  <main>
+    <section class="page-hero container"><p class="eyebrow">MY WORK</p><h1>Projects built with<br><span class="accent-text">curiosity and code.</span></h1><p class="page-lead">A selection of projects from my learning journey. Open a repository to explore the source and details.</p></section>
+    <section class="section container project-grid project-grid-page">
+      <article class="project-card"><div class="project-topline"><span class="project-number">01</span><span class="project-type">WEB · PYTHON</span></div><div class="project-symbol">↗</div><h2>Django Online Job Portal</h2><p>A job portal project built with Django and Python.</p><div class="tag-list"><span>Python</span><span>Django</span></div><a class="card-link" href="https://github.com/wuba21/Django-online-Job-Portal-system" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+      <article class="project-card"><div class="project-topline"><span class="project-number">02</span><span class="project-type">APPLICATION · JAVA</span></div><div class="project-symbol">⌘</div><h2>Job Portal System</h2><p>A Java project focused on a job portal system.</p><div class="tag-list"><span>Java</span></div><a class="card-link" href="https://github.com/wuba21/JobPortalSystem" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+      <article class="project-card"><div class="project-topline"><span class="project-number">03</span><span class="project-type">MACHINE LEARNING</span></div><div class="project-symbol">✳</div><h2>Crop Recommendation</h2><p>A Python machine-learning project exploring crop recommendations.</p><div class="tag-list"><span>Python</span><span>Machine learning</span></div><a class="card-link" href="https://github.com/wuba21/Crop-Recommendation-in-ML" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+      <article class="project-card"><div class="project-topline"><span class="project-number">04</span><span class="project-type">APPLICATION</span></div><div class="project-symbol">▦</div><h2>School Management System</h2><p>A school management project currently in progress.</p><div class="tag-list"><span>In progress</span></div><a class="card-link" href="https://github.com/wuba21/School-Management-System-" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></article>
+      <article class="project-card"><div class="project-topline"><span class="project-number">05</span><span class="project-type">C++ · DSA</span></div><div class="project-symbol">{ }</div><h2>Data Structures Project</h2><p>A C++ project for practicing data structures and programming fundamentals.</p><div class="tag-list"><span>C++</span><span>DSA</span></div><a class="card-link" href="https://github.com/wuba21/portfolio-wubante.Ti/blob/main/DSA%20%20project.cpp" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></article>
     </section>
-
-    <section aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <p class="note">Explore my projects on GitHub:</p>
-      <ul class="project-list">
-        <li>
-          <a href="https://github.com/wuba21/Django-online-Job-Portal-system">Django Online Job Portal</a>
-          <p>Job portal project built with Django and Python.</p>
-        </li>
-        <li>
-          <a href="https://github.com/wuba21/JobPortalSystem">Job Portal System</a>
-          <p>Job portal project written in Java.</p>
-        </li>
-        <li>
-          <a href="https://github.com/wuba21/Crop-Recommendation-in-ML">Crop Recommendation in ML</a>
-          <p>Machine-learning crop recommendation project built with Python.</p>
-        </li>
-        <li>
-          <a href="https://github.com/wuba21/School-Management-System-">School Management System</a>
-          <p>A school management project currently in progress.</p>
-        </li>
-      </ul>
-    </section>
-
-    <div class="back">
-      <a href="contact.html">Get in touch →</a>
-    </div>
+    <section class="section container callout"><div><p class="eyebrow">LET’S CONNECT</p><h2>Interested in working together?</h2><p class="muted-copy">I’m always happy to learn about new ideas and collaborations.</p></div><a class="button button-primary" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a></section>
   </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">W</span><span>Wubante<span class="brand-dot">.</span></span></a><p>© <span id="year"></span> Wubante Tilahun</p><a class="footer-link" href="https://github.com/wuba21" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      navLinks.classList.toggle('is-open', !isOpen);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
