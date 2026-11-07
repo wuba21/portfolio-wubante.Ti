@@ -1,172 +1,146 @@
 <!-- service.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Skills — Wubante Tilahun</title>
-    <style>
-:root {
-  --background: #0f0f0f;
-    --card: #1a1a1a;
-    --accent: #6c63ff;
-    --accent-2: #3f3d56;
-    --text: #e0e0e0;
-    --muted: #a0a0a0;
-    --radius: 12px;
-    --shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
-}
-.about-content {
-  max-width: 900px;
-  margin: 40px auto;
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  color: var(--text);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  align-self: flex-start;
-}
-
-.logo img {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.08);
-}
-
-.logo span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.6px;
-}
-
-.logo:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-}
-
-.logo:hover span {
-  color: white;
-}
-
-.about-details h2 {
-  color: var(--accent);
-  font-size: 1.3rem;
-  margin-top: 8px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 4px;
-}
-
-.skills-list {
-  list-style: none;
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-
-.skills-list li {
-  background: rgba(255, 255, 255, 0.04);
-  border-left: 4px solid var(--accent);
-  padding: 10px 14px;
-  border-radius: 8px;
-  color: var(--muted);
-  transition: all 0.3s ease;
-}
-
-.skills-list li:hover {
-  transform: translateX(6px);
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.about-details p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-top: 8px;
-}
-.back{
-      margin-top: 20px;
-      margin-bottom: 40px;
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 500;
-      background: #350ff2;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects &amp; Skills — Wubante Tilahun</title>
+  <style>
+    :root {
+      --card: #1a1a1a;
+      --accent: #6c63ff;
+      --accent-2: #3f3d56;
+      --text: #e0e0e0;
+      --muted: #a0a0a0;
+      --radius: 12px;
+      --shadow: rgba(0, 0, 0, 0.5) 0 4px 12px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 1px 20px;
+      background: #0f0f0f;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .about-content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      align-self: flex-start;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      text-decoration: none;
+    }
+    .logo img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .logo span { color: var(--accent); font-size: 1.5rem; font-weight: 600; }
+    h2 { margin: 8px 0 0; color: var(--accent); }
+    .skills-list, .project-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills-list li, .project-list li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+    }
+    .project-list a { color: #b7b2ff; font-weight: 600; }
+    .project-list a:hover { color: #fff; }
+    .project-list p { margin: 6px 0 0; }
+    .note { color: var(--muted); margin: 0; }
+    .back {
+      width: 150px;
+      margin: 20px 0 10px;
       padding: 10px;
       border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(3,8,20,0.3);
-      width: 150px;
+      background: #350ff2;
+      text-align: center;
     }
-    .back a{
-      color: #fff;
-      text-decoration: none;
-
+    .back a { color: #fff; text-decoration: none; }
+    .back:hover { background: #1c2541; }
+    @media (max-width: 720px) {
+      .about-content { padding: 20px; }
+      .logo img { width: 45px; height: 45px; }
+      .logo span { font-size: 1.3rem; }
     }
-    .back:hover{
-      background: #1c2541;
-      box-shadow: 0 6px 18px rgba(3,8,20,0.35);
-      color: #f6f6f7ef;
-    }
-@media (max-width: 720px) {
-  .about-content {
-    padding: 20px;
-  }
-
-  .logo img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .logo span {
-    font-size: 1.3rem;
-  }
-}
-
-    </style>
+  </style>
 </head>
 <body>
-  <section class="about-content">
-   <a class="logo" href="index.html"><img src="image.png" alt="UOG LOGO"> <span>Wubante</span></a>
+  <main class="about-content">
+    <a class="logo" href="index.html">
+      <img src="image.png" alt="University of Gondar logo">
+      <span>Wubante</span>
+    </a>
 
-  <h2>Skills</h2>
-            <ul class="skills-list">
-            <li>HTML — building the structure and content of web pages</li>
-            <li>CSS — styling and creating responsive layouts</li>
-            <li>C++ — data structures, algorithms, and problem solving</li>
-            <li>JavaScript — adding interactive behavior to web pages</li>
-            <li>SQL — basic queries and database schema design</li>
-            <li>Tools — Git, VS Code, and Cisco Packet Tracer</li>
-        </ul>
-  <h2>Projects</h2>
-        <p>
-            I have built a personal portfolio website with HTML and CSS, a simple
-            Book Wishlist System in C++, and network simulations using Cisco Packet Tracer.
-            I have also worked with JavaScript and SQL while learning web development and programming.
-        </p>
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML — building web page structure and content</li>
+        <li>CSS — styling and responsive layouts</li>
+        <li>JavaScript — interactive web page behavior</li>
+        <li>C++ — data structures, algorithms, and problem solving</li>
+        <li>SQL — basic queries and database schema design</li>
+        <li>Tools — Git, VS Code, and Cisco Packet Tracer</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <p class="note">Explore my projects on GitHub:</p>
+      <ul class="project-list">
+        <li>
+          <a href="https://github.com/wuba21/Django-online-Job-Portal-system">Django Online Job Portal</a>
+          <p>Job portal project built with Django and Python.</p>
+        </li>
+        <li>
+          <a href="https://github.com/wuba21/JobPortalSystem">Job Portal System</a>
+          <p>Job portal project written in Java.</p>
+        </li>
+        <li>
+          <a href="https://github.com/wuba21/Crop-Recommendation-in-ML">Crop Recommendation in ML</a>
+          <p>Machine-learning crop recommendation project built with Python.</p>
+        </li>
+        <li>
+          <a href="https://github.com/wuba21/School-Management-System-">School Management System</a>
+          <p>A school management project currently in progress.</p>
+        </li>
+        <li>
+          <a href="https://github.com/wuba21/wube-website">Wube Website</a>
+          <p>A website project from my GitHub repositories.</p>
+        </li>
+        <li>
+          <a href="https://github.com/wuba21/Wubante-Tilahun">Wubante Tilahun Portfolio</a>
+          <p>Another portfolio project showcasing my web development work.</p>
+        </li>
+      </ul>
+    </section>
 
     <div class="back">
-      <a href="contact.html">&rarr; Next</a>
+      <a href="contact.html">Get in touch →</a>
     </div>
-  </section>
+  </main>
 </body>
-
 </html>
